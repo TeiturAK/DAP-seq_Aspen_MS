@@ -59,7 +59,7 @@ Output is found in:
 `/mnt/picea/projects/aspseq/tniittylae/DAP-Seq/Ptremula_annotations/annotations-for-DAPseq-analysis/Potra02_LTR_annotations.neighbours-merged.bed`
 `/mnt/picea/projects/aspseq/tniittylae/DAP-Seq/Ptremula_annotations/annotations-for-DAPseq-analysis/Potra02_repeat_annotations.neighbours-merged.LTR-subtract.bed`
 
-#### A comment about the origin of the repeat and LTR files as there was uncertainty at one point
+#### A comment about the origin of the repeat and LTR files as there was uncertainty at one point:
 We have a GFF created using RepeatMasker that used the output from RepeatModeller + the public database of repeats (which created the repeat annotations) and we then have this separate GFF produced (LTR annotation) from the combined output of LTR-Harvest and LTRFinder ([GitHub - oushujun/LTR_retriever: LTR_retriever is a highly accurate and sensitive program for identification of LTR retrotransposons; The LTR Assembly Index (LAI) is also included in this package.](https://github.com/oushujun/LTR_retriever#inputs)) as run for the LAI assembly score analysis.
 
 
