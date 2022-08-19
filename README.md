@@ -6,7 +6,7 @@ Scripts for analysis of DAP-seq and ATAC-seq data; creation of peak inferred reg
 ## Contents of src/py
 Script for extracing promoter region from gene annotation file.
 
-## Notes on the genomic feature annotations
+## Notes on the genomic feature annotations used in the analysis
 ### Intragenic annotations
 5'UTR, 3'UTR, intron and CDS annotations where all extracted from the gene annotation file in `/mnt/picea/storage/reference/Populus-tremula/v2.2/gff/Potra02_genes.gff` using the following grep and bedtools command:
 `grep <genomic feature> Potra02_genes.gff | bedtools sort -i - | bedtools merge -s -i - > <genomic feature sorted and overlaps merged>` 
