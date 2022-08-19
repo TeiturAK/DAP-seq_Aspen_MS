@@ -48,20 +48,18 @@ Output is found in:
 
 ### LTR and repeat annotations 
 
-
+LTR annotations were extracted from `/mnt/picea/storage/reference/Populus-tremula/v2.2/gff/Potra02_LTR.gff3.gz` using the following command:
+`zcat Potra02_LTR.gff3.gz | bedtools sort -i - | bedtools merge -s -d 1 -i - > Potra02_LTR_annotations.neighbours-merged.bed`
 
 Repeats not overlapping annotated LTR were extracted from `/mnt/picea/storage/reference/Populus-tremula/v2.2/gff/Potra02_repeatmasked.gff.gz` with the following commands:
-`zcat Potra02_repeatmasked.gff.gz | bedtools sort -i - | bedtools merge -s -i - > Potra02_repeat_annotations.neighbours-merged.bed`
+`zcat Potra02_repeatmasked.gff.gz | bedtools sort -i - | bedtools merge -s -d 1 -i - > Potra02_repeat_annotations.neighbours-merged.bed`
 `bedtools subtract -a Potra02_repeat_annotations.neighbours-merged.bed -b Potra02_LTR_annotations.neighbours-merged.bed > Potra02_repeat_annotations.neighbours-merged.LTR-subtract.bed`
 
 Output is found in:
 `/mnt/picea/projects/aspseq/tniittylae/DAP-Seq/Ptremula_annotations/annotations-for-DAPseq-analysis/Potra02_LTR_annotations.neighbours-merged.bed`
 `/mnt/picea/projects/aspseq/tniittylae/DAP-Seq/Ptremula_annotations/annotations-for-DAPseq-analysis/Potra02_repeat_annotations.neighbours-merged.LTR-subtract.bed`
 
-#### Some additional notes on the original files as there was uncertainty at one point
+#### A comment about the origin of the repeat and LTR files as there was uncertainty at one point
+We have a GFF created using RepeatMasker that used the output from RepeatModeller + the public database of repeats (which created the repeat annotations) and we then have this separate GFF produced (LTR annotation) from the combined output of LTR-Harvest and LTRFinder ([GitHub - oushujun/LTR_retriever: LTR_retriever is a highly accurate and sensitive program for identification of LTR retrotransposons; The LTR Assembly Index (LAI) is also included in this package.](https://github.com/oushujun/LTR_retriever#inputs)) as run for the LAI assembly score analysis.
 
-Repeat source
-
-LTR source
-LTR annotation was created by Bastian with [GitHub - oushujun/LTR_retriever: LTR_retriever is a highly accurate and sensitive program for identification of LTR retrotransposons; The LTR Assembly Index (LAI) is also included in this package.](https://github.com/oushujun/LTR_retriever#inputs). 
 
