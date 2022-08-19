@@ -1,9 +1,9 @@
 # DAP-seq_Aspen_MS
 
-## Content of src/R
+## Contents of src/R
 Scripts for analysis of DAP-seq and ATAC-seq data; creation of peak inferred regulatory network.
 
-## Content of src/py
+## Contents of src/py
 Script for extracing promoter region from gene annotation file.
 
 ## Notes on the genomic feature annotations
