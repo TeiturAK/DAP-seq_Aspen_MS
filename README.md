@@ -1,12 +1,15 @@
 # DAP-seq_Aspen_MS
 
-## Contents of pipeline
-SBATCH scripts for processing raw ATAC/DAP-seq data with Trimmomatic, BWA-MEM, Samtools Markdup, filtering reads aligned to mitochondria/chloroplast sequences and calling peaks with MACS2.
+## Workflow
+All parameters are preset in the submit and analysis scripts.
 
-## Contents of src/R
+### Contents of pipeline
+SBATCH scripts for processing raw ATAC/DAP-seq data with Trimmomatic, BWA-MEM, Samtools Markdup, filtering reads aligned to mitochondria/chloroplast sequences and calling peaks with MACS2. 
+
+### Contents of src/R
 Scripts for analysis of DAP-seq and ATAC-seq data; creation of peak inferred regulatory network.
 
-## Contents of src/py
+### Contents of src/py
 Script for extracing promoter region from gene annotation file.
 
 
